@@ -4,20 +4,26 @@ import '@fontsource-variable/inter';
 
 function App() {
 
-  const MAX_FEATURES = 4;
+  const brand = 'BRAND NAME';
+
+  const underBrand = '(underBrand) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. '
+
+  const MAX_FEATURES = 5;
 
   const featureNames = {
-    1: 'About',
-    2: 'Fundraising',
-    3: 'Dashboard',
-    4: 'Links'
+    1: 'Page One',
+    2: 'Page Two',
+    3: 'Page Three',
+    4: 'Page Four',
+    5: 'Page Five'
   };
 
   const features = {
-    1: 'Fund.codes is a platform that simplifies online fundraising. It allows organizations and individuals to easily set up a dedicated event page for their philanthropic causes. Each event page is given its own URL, serving as a one-stop destination where donors can find all the information they need, monitor the fundraiser\'s progress, and contribute without complication. Fund.codes is about removing barriers so that supporting a good cause is as simple and straightforward as it should be.',
-    2: 'When it comes to raising money, it\'s the personal connections that count. With Fund.codes, each team member can have their own fundraising page. It\'s more than just collecting funds – it\'s about bringing people together to support a shared goal. Whether it\'s energizing the newest volunteers or tapping into the broad network of alumni, the platform ensures that everyone involved can share their individual stories and make a personal impact.',
-    3: 'Every fundraising campaign needs a clear strategy and a way to track progress. The Dashboard on Fund.codes provides this vision and control. It simplifies complex tasks and offers a clear overview of the campaign\'s status. From the Dashboard, organizers can not only track the campaign\'s progress but also launch new initiatives and appreciate the collective contributions of their community. It represents your mission\'s story as it unfolds, offering real-time insights and management capabilities.',
-    4: 'With Fund.codes, sharing your fundraiser is as straightforward as it gets. Rather than dealing with long and confusing web addresses, we provide short, memorable links. It\'s about making it easy for anyone to find your page and support your cause. Think of it like giving someone a direct line to your event – no fuss, no hassle. Just a simple link that packs all the punch you need to spread the word effectively.'
+    1: '(Page 1) Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    2: '(Page 2) Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    3: '(Page 3) At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.',
+    4: '(Page 4) Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
+    5: '(Page 5) Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?'
   };
 
   const [activeFeature, setActiveFeature] = useState(1);
@@ -54,9 +60,9 @@ function App() {
   return (
     <div className="app">
       <div className={`sidebar ${activeFeature > 1 ? 'shrink' : ''}`}>
-        <div className="brand">fund.codes</div>
+        <div className="brand">{brand}</div>
         <div className="development">
-          is currently in development. enter your email below to be the first to hear about updates.
+          {underBrand}
         </div>
         <input type="email" placeholder="Email" />
         <button className="subscribe">Subscribe</button>
