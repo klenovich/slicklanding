@@ -48,7 +48,7 @@ input[type="email"] {
   margin-top:10px;
 }
 
-.feature {
+.page {
   flex: 3;
   background-color: white;
   overflow: hidden;
@@ -57,12 +57,12 @@ input[type="email"] {
   font-weight:500;
 }
 
-.feature-content {
+.page-content {
   padding: 20px;
   font-size: 18px;
 }
 
-.feature-navigation {
+.page-navigation {
   display: flex;
   flex-direction: column;
   color: black;
@@ -71,7 +71,7 @@ input[type="email"] {
   text-align:right;
 }
 
-.feature-button {
+.page-button {
   text-align: right;
   border: none;
   background: none;
@@ -81,7 +81,7 @@ input[type="email"] {
   font-weight:500;
 }
 
-.feature-button.active {
+.page-button.active {
   font-weight:800;
   font-style: italic;
 }
@@ -97,18 +97,16 @@ input[type="email"] {
     flex: none;
   }
 
-  .feature {
+  .page {
     order: 2;
   }
 
-  .feature-navigation {
+  .page-navigation {
     order: 3;
     position: static;
   }
 
-
   .brand, .development {
     padding:20px;
   }
-
 }
